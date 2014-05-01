@@ -56,4 +56,33 @@ A simple demo for facebook's pop framework.
             
 }
 ```
+
+### 效果如下
 ![image](https://github.com/jxd001/POPdemo/blob/master/TestPop/Untitled1.gif?raw=true)
+
+
+### 上面的代码是改变view的size，下面示例改变position
+```objective-c
+ POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
+    
+    CGPoint point = _springView.center;
+
+    if (point.y==240) {
+        springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, -230)];
+    }
+    else{
+        springAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(point.x, 240)];
+    }
+    
+    //弹性值
+    springAnimation.springBounciness = 20.0;
+    //弹性速度
+    springAnimation.springSpeed = 20.0;
+    
+    [_springView pop_addAnimation:springAnimation forKey:@"changeposition"];
+```
+
+### 效果：
+![image](https://github.com/jxd001/POPdemo/blob/master/TestPop/Untitled2.gif?raw=true)
+
+
