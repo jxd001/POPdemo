@@ -15,3 +15,17 @@ A simple demo for facebook's pop framework.
 很简单，直接把pop文件夹拖到项目里，然后导入pop.h即可。
 
     #import "POP.h"
+
+### 下面的代码示例用POPSpringAnimation做一个弹性放大-缩小的效果
+
+        - (void)viewDidLoad
+        {
+           [super viewDidLoad];
+           // Do any additional setup after loading the view from its nib.
+    
+          //添加手势
+          UITapGestureRecognizer *gestureForSpring = [[UITapGestureRecognizer alloc] init];
+          [gestureForSpring addTarget:self action:@selector(changeSize:)];
+          [_springView addGestureRecognizer:gestureForSpring];
+
+        }
