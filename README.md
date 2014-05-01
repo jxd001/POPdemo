@@ -20,38 +20,40 @@ A simple demo for facebook's pop framework.
 ### 下面的代码示例用POPSpringAnimation做一个弹性放大-缩小的效果
 
 ```objective-c
-        - (void)viewDidLoad
-        {
-           [super viewDidLoad];
-           // Do any additional setup after loading the view from its nib.
+- (void)viewDidLoad
+{
+   [super viewDidLoad];
+   // Do any additional setup after loading the view from its nib.
+          
+//添加手势
+    UITapGestureRecognizer *gestureForSpring = [[UITapGestureRecognizer alloc] init];
+    [gestureForSpring addTarget:self action:@selector(changeSize:)];
+    [_springView addGestureRecognizer:gestureForSpring];
+
+}
+
+(http://github.com/jxd001/POPdemo/TestPop/Untitled1.gif)
+
+
+- (void)changeSize:(UITapGestureRecognizer*)tap{
+- 
+    //用POPSpringAnimation 让viewBlue实现弹性放大缩小的效果
+    POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerSize];
+            
+    CGRect rect = _springView.frame;
+    if (rect.size.width==100) {
+        springAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(300, 300)];
+    }
+    else{
+        springAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(100, 100)];
+    }
     
-          //添加手势
-          UITapGestureRecognizer *gestureForSpring = [[UITapGestureRecognizer alloc] init];
-          [gestureForSpring addTarget:self action:@selector(changeSize:)];
-          [_springView addGestureRecognizer:gestureForSpring];
-
-        }
-
-
-        - (void)changeSize:(UITapGestureRecognizer*)tap{
-            //用POPSpringAnimation 让viewBlue实现弹性放大缩小的效果
-            POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerSize];
-            
-            CGRect rect = _springView.frame;
-            if (rect.size.width==100) {
-                springAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(300, 300)];
-            }
-            else{
-                springAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(100, 100)];
-            }
-            
+    //弹性值
+    springAnimation.springBounciness = 20.0;
+    //弹性速度
+    springAnimation.springSpeed = 20.0;
         
-            //弹性值
-            springAnimation.springBounciness = 20.0;
-            //弹性速度
-            springAnimation.springSpeed = 20.0;
-        
-            [_springView.layer pop_addAnimation:springAnimation forKey:@"changesize"];
+    [_springView.layer pop_addAnimation:springAnimation forKey:@"changesize"];
             
-        }
+}
 ```
