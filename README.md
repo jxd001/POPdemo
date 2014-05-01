@@ -32,7 +32,6 @@ A simple demo for facebook's pop framework.
 
 }
 
-(http://github.com/jxd001/POPdemo/TestPop/Untitled1.gif)
 
 
 - (void)changeSize:(UITapGestureRecognizer*)tap{
@@ -57,3 +56,4 @@ A simple demo for facebook's pop framework.
             
 }
 ```
+![image](http://github.com/jxd001/POPdemo/TestPop/Untitled1.gif)
