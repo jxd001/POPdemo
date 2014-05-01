@@ -16,6 +16,7 @@ A simple demo for facebook's pop framework.
 
     #import "POP.h"
 
+
 ### 下面的代码示例用POPSpringAnimation做一个弹性放大-缩小的效果
 
         - (void)viewDidLoad
@@ -29,3 +30,27 @@ A simple demo for facebook's pop framework.
           [_springView addGestureRecognizer:gestureForSpring];
 
         }
+
+
+        - (void)changeSize:(UITapGestureRecognizer*)tap{
+            //用POPSpringAnimation 让viewBlue实现弹性放大缩小的效果
+            POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerSize];
+            
+            CGRect rect = _springView.frame;
+            if (rect.size.width==100) {
+                springAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(300, 300)];
+            }
+            else{
+                springAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(100, 100)];
+            }
+            
+        
+            //弹性值
+            springAnimation.springBounciness = 20.0;
+            //弹性速度
+            springAnimation.springSpeed = 20.0;
+        
+            [_springView.layer pop_addAnimation:springAnimation forKey:@"changesize"];
+            
+        }
+        
