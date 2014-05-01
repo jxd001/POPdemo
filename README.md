@@ -19,6 +19,7 @@ A simple demo for facebook's pop framework.
 
 ### 下面的代码示例用POPSpringAnimation做一个弹性放大-缩小的效果
 
+```objective-c
         - (void)viewDidLoad
         {
            [super viewDidLoad];
@@ -53,4 +54,4 @@ A simple demo for facebook's pop framework.
             [_springView.layer pop_addAnimation:springAnimation forKey:@"changesize"];
             
         }
-        
+```
