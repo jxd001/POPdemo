@@ -56,4 +56,4 @@ A simple demo for facebook's pop framework.
             
 }
 ```
-![image](http://github.com/jxd001/POPdemo/blob/master/TestPop/Untitled1.gif)
+![image](https://github.com/jxd001/POPdemo/blob/master/TestPop/Untitled1.gif?raw=true)
