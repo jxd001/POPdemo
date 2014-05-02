@@ -33,8 +33,9 @@
     
     NSDictionary *springDic = @{@"type":@"POPSpringAnimation",@"animations":@[@"kPOPLayerSize",@"kPOPLayerPosition",@"kPOPViewFrame"]};
     NSDictionary *basicDic = @{@"type":@"POPBasicAnimation",@"animations":@[@"kPOPViewAlpha"]};
+    NSDictionary *combinDic = @{@"type":@"CombineAnimation",@"animations":@[@" POPbox"]};
     
-    dataArray = @[springDic,basicDic];
+    dataArray = @[springDic,basicDic,combinDic];
 
     
     self.title = @"POP";
@@ -49,12 +50,6 @@
     
     POPCustomAnimation 可以自定义动画的类
      */
-    
-
-    
-    
-    
-    
 }
 
 #pragma mark - UITableView Datasource
@@ -115,7 +110,7 @@
     Class class = NSClassFromString([classNamePre stringByAppendingString:classNameSuf]);
     
     UIViewController *ctrl = [[class alloc] initWithNibName:classNmae bundle:nil];
-    ctrl.title = [NSString stringWithFormat:@"k%@",classNameSuf];
+    ctrl.title = classNameSuf;
     
     [self.navigationController pushViewController:ctrl animated:YES];
 }

@@ -46,6 +46,9 @@
 		4D72FBFC19120842001B695A /* POPSpringPOPViewFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D72FBFA19120842001B695A /* POPSpringPOPViewFrame.m */; };
 		4D72FBFD19120842001B695A /* POPSpringPOPViewFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D72FBFB19120842001B695A /* POPSpringPOPViewFrame.xib */; };
 		4D72FBFF19120A3F001B695A /* rexueriji.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D72FBFE19120A3F001B695A /* rexueriji.png */; };
+		4D72FC04191351AD001B695A /* CombinePOPbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D72FC02191351AD001B695A /* CombinePOPbox.m */; };
+		4D72FC07191353A8001B695A /* CombinePOPbox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D72FC06191353A8001B695A /* CombinePOPbox.xib */; };
+		4D72FC09191358B5001B695A /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D72FC08191358B5001B695A /* menu.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +135,10 @@
 		4D72FBFA19120842001B695A /* POPSpringPOPViewFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPSpringPOPViewFrame.m; sourceTree = "<group>"; };
 		4D72FBFB19120842001B695A /* POPSpringPOPViewFrame.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = POPSpringPOPViewFrame.xib; sourceTree = "<group>"; };
 		4D72FBFE19120A3F001B695A /* rexueriji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rexueriji.png; sourceTree = "<group>"; };
+		4D72FC01191351AD001B695A /* CombinePOPbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CombinePOPbox.h; sourceTree = "<group>"; };
+		4D72FC02191351AD001B695A /* CombinePOPbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CombinePOPbox.m; sourceTree = "<group>"; };
+		4D72FC06191353A8001B695A /* CombinePOPbox.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CombinePOPbox.xib; sourceTree = "<group>"; };
+		4D72FC08191358B5001B695A /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +274,7 @@
 		4D72FBD51911ED96001B695A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				4D72FC08191358B5001B695A /* menu.png */,
 				4D72FBFE19120A3F001B695A /* rexueriji.png */,
 				4D72FBE21911EE21001B695A /* chengxuyuan.png */,
 			);
@@ -281,6 +289,7 @@
 				4D72FBDC1911EDB6001B695A /* ViewController.xib */,
 				4D72FBE11911EDDE001B695A /* POPSpringAnimation */,
 				4D72FBF31911FF64001B695A /* POPBasicAnimation */,
+				4D72FC001913516E001B695A /* CombineAnimation */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -309,6 +318,16 @@
 				4D72FBF61911FFE7001B695A /* POPBasicPOPViewAlpha.xib */,
 			);
 			name = POPBasicAnimation;
+			sourceTree = "<group>";
+		};
+		4D72FC001913516E001B695A /* CombineAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				4D72FC01191351AD001B695A /* CombinePOPbox.h */,
+				4D72FC02191351AD001B695A /* CombinePOPbox.m */,
+				4D72FC06191353A8001B695A /* CombinePOPbox.xib */,
+			);
+			name = CombineAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +384,8 @@
 				4D72FBB71911CFDD001B695A /* pop-Info.plist in Resources */,
 				4D72FBE91911EF5D001B695A /* POPSpringPOPLayerPosition.xib in Resources */,
 				4D72FBF81911FFE7001B695A /* POPBasicPOPViewAlpha.xib in Resources */,
+				4D72FC09191358B5001B695A /* menu.png in Resources */,
+				4D72FC07191353A8001B695A /* CombinePOPbox.xib in Resources */,
 				4D72FBFD19120842001B695A /* POPSpringPOPViewFrame.xib in Resources */,
 				4D233AA4190FEB86004B35AC /* InfoPlist.strings in Resources */,
 				4D72FBFF19120A3F001B695A /* rexueriji.png in Resources */,
@@ -392,6 +413,7 @@
 				4D233AA6190FEB86004B35AC /* main.m in Sources */,
 				4D72FBC81911CFDD001B695A /* POPVector.mm in Sources */,
 				4D72FBC01911CFDD001B695A /* POPCGUtils.mm in Sources */,
+				4D72FC04191351AD001B695A /* CombinePOPbox.m in Sources */,
 				4D72FBBE1911CFDD001B695A /* POPAnimator.mm in Sources */,
 				4D72FBC91911CFDD001B695A /* TransformationMatrix.cpp in Sources */,
 				4D72FBC41911CFDD001B695A /* POPLayerExtras.mm in Sources */,
