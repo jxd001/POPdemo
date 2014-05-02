@@ -59,12 +59,6 @@
     [_popView pop_addAnimation:positionAnimation forKey:@"frameAnimation"];
     
     
-//    POPSpringAnimation *scaleAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
-//    scaleAnimation.fromValue  = [NSValue valueWithCGSize:CGSizeMake(0.0, 0.0f)];
-//    scaleAnimation.toValue  = [NSValue valueWithCGSize:CGSizeMake(1.0f, 1.0f)];
-//    scaleAnimation.springBounciness = 20.0f;
-//    scaleAnimation.springSpeed = 20.0f;
-//    [_popView.layer pop_addAnimation:scaleAnimation forKey:@"scaleAnimation"];
 }
 
 - (void)hidePop{
