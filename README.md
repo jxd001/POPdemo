@@ -83,8 +83,8 @@ A simple demo for facebook's pop framework.
 ```
 
 ### 一个比较实用的效果，弹出菜单：
-![image](https://github.com/jxd001/POPdemo/blob/master/TestPop/Untitled3.gif?raw=true)
-代码如下：
+![image](https://github.com/jxd001/POPdemo/blob/master/TestPop/Untitled3.gif?raw=true)<br />
+代码如下：<br />
 ```objective-c
 
 self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStyleDone target:self action:@selector(showPop)];
