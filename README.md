@@ -89,7 +89,6 @@ A simple demo for facebook's pop framework.
 
 self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStyleDone target:self action:@selector(showPop)];
 
-
 - (void)showPop{
     
     if (_isOpened) {
@@ -111,6 +110,7 @@ self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:
     POPBasicAnimation *positionAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPViewFrame];
     positionAnimation.fromValue = [NSValue valueWithCGRect:_showPosition];
     positionAnimation.toValue = [NSValue valueWithCGRect:_hidePosition];
+    //key一样就会用后面的动画覆盖之前的
     [_popView pop_addAnimation:positionAnimation forKey:@"frameAnimation"];
  
     _isOpened = NO;
