@@ -80,8 +80,11 @@ A simple demo for facebook's pop framework.
     springAnimation.springSpeed = 20.0;
     
     [_springView pop_addAnimation:springAnimation forKey:@"changeposition"];
+    
 ```
 
+### 效果：
+![image](https://github.com/jxd001/POPdemo/blob/master/TestPop/Untitled2.gif?raw=true)<br />
 ### 一个比较实用的效果，弹出菜单：
 ![image](https://github.com/jxd001/POPdemo/blob/master/TestPop/Untitled3.gif?raw=true)<br />
 代码如下：<br />
