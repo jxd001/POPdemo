@@ -57,8 +57,6 @@
     positionAnimation.springBounciness = 15.0f;
     positionAnimation.springSpeed = 20.0f;
     [_popView pop_addAnimation:positionAnimation forKey:@"frameAnimation"];
-    
-    
 }
 
 - (void)hidePop{

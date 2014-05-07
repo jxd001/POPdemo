@@ -59,6 +59,9 @@ NSString * const kPOPViewSize = kPOPLayerSize;
 NSString * const kPOPTableViewContentOffset = @"tableView.contentOffset";
 NSString * const kPOPTableViewContentSize = @"tableView.contentSize";
 
+NSString * const kPOPLabelFontSize = @"fontsize";
+
+
 
 /**
  State structure internal to static animatable property.
@@ -76,6 +79,16 @@ static POPStaticAnimatablePropertyState _staticStates[] =
 {
   /* CALayer */
   
+    {kPOPLabelFontSize,
+        ^(UIFont *obj, CGFloat values[]) {
+            values[0] = obj.pointSize;
+        },
+        ^(UIFont *obj, const CGFloat values[]) {
+            obj = [UIFont systemFontOfSize:values[0]];
+        },
+        1.0
+    },
+
   {kPOPLayerBackgroundColor,
     ^(CALayer *obj, CGFloat values[]) {
       POPCGColorGetRGBAComponents(obj.backgroundColor, values);

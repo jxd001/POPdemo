@@ -135,4 +135,6 @@ extern NSString * const kPOPTableViewContentOffset;
 extern NSString * const kPOPTableViewContentSize;
 
 
+extern NSString * const kPOPLabelFontSize;
+
 #endif
