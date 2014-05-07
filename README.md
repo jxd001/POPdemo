@@ -82,7 +82,38 @@ A simple demo for facebook's pop framework.
     [_springView pop_addAnimation:springAnimation forKey:@"changeposition"];
 ```
 
-### 效果：
-![image](https://github.com/jxd001/POPdemo/blob/master/TestPop/Untitled2.gif?raw=true)
+### 一个比较实用的效果，弹出菜单：
+![image](https://github.com/jxd001/POPdemo/blob/master/TestPop/Untitled3.gif?raw=true)
+代码如下：
+```objective-c
 
-这个效果可以做一个弹出框从上往下跳出来，我之前做过这个效果，用了N多代码，用pop只用几句代码就实现了。
+self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStyleDone target:self action:@selector(showPop)];
+
+
+- (void)showPop{
+    
+    if (_isOpened) {
+        [self hidePop];
+        return;
+    }
+    _isOpened = YES;
+    
+    POPSpringAnimation *positionAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
+    positionAnimation.fromValue = [NSValue valueWithCGRect:_hidePosition];
+    positionAnimation.toValue = [NSValue valueWithCGRect:_showPosition];
+    positionAnimation.springBounciness = 15.0f;
+    positionAnimation.springSpeed = 20.0f;
+    [_popView pop_addAnimation:positionAnimation forKey:@"frameAnimation"];
+}
+
+- (void)hidePop{
+    
+    POPBasicAnimation *positionAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPViewFrame];
+    positionAnimation.fromValue = [NSValue valueWithCGRect:_showPosition];
+    positionAnimation.toValue = [NSValue valueWithCGRect:_hidePosition];
+    [_popView pop_addAnimation:positionAnimation forKey:@"frameAnimation"];
+ 
+    _isOpened = NO;
+}
+
+```
