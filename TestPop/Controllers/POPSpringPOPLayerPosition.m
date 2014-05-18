@@ -44,7 +44,7 @@
         springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, -230)];
     }
     else{
-        springAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(point.x, 240)];
+        springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, 240)];
     }
     
     //弹性值
